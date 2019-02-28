@@ -1,0 +1,11 @@
+#!/bin/sh
+
+ROOT_DIR=${SAVITAR_MONITOR_ROOT}/monitor
+
+CURRENT_DIR=$(pwd)
+
+EXEC_DIR=${CURRENT_DIR/${ROOT_DIR}/${ROOT_DIR}\/build\/}
+
+cd ${EXEC_DIR}
+PATH=.:$PATH
+($*)

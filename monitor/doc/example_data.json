@@ -1,0 +1,42 @@
+{
+    "report":{
+        "seq":1,
+        "hostname":"gzm1",
+        "hostip":"127.0.0.1",
+        "time_min": 1234,
+        "commattr":[
+            {
+                "attrid":1,
+                "value":123
+            },
+            {
+                "attrid":2,
+                "value":234
+            }
+        ],
+        "statattr":[
+            {
+                "attrid":1,
+                "min":10,
+                "max":100,
+                "count": 40,
+                "sum": 2000
+            },
+            {
+                "attrid":1,
+                "min":10,
+                "max":100,
+                "count": 40,
+                "sum": 2000
+            },
+            {
+                "attrid":1,
+                "min":10,
+                "max":100,
+                "count": 40,
+                "sum": 2000
+            }
+        ]
+
+    }
+}
