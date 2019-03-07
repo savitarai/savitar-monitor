@@ -4,3 +4,4 @@ build
 doxygen
 logs
 third_party
+.initdone
