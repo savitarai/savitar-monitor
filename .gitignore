@@ -3,5 +3,4 @@ build
 *.swp
 doxygen
 logs
-third_party
 .initdone
