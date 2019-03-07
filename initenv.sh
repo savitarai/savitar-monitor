@@ -19,5 +19,8 @@ fi
 echo "export SAVITAR_MONITOR_ROOT=${PROJECT_DIR}" >>~/.bash_profile
 echo "export PATH=\$SAVITAR_MONITOR_ROOT:\$PATH" >>~/.bash_profile
 
+git submodule init
+git submodule update 
+
 #初始化成功标记
 touch ${PROJECT_DIR}/.initdone
