@@ -1,3 +1,6 @@
 [submodule "third_party"]
 	path = third_party
 	url = https://github.com/savitarai/third_party.git
+[submodule "monitor/util"]
+	path = monitor/util
+	url = https://github.com/savitarai/util.git
