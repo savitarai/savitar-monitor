@@ -145,6 +145,11 @@ int Agent::Report(const std::string &data)
 {
     int rt=0;
     do{
+        for(auto & i:data_processor_list_)
+        {
+            i->Proc(data.c_str());
+        }
+
     }while(0);
     return rt;
 }
