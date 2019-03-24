@@ -21,6 +21,7 @@
 #include "util/log.h"
 #include "util/log.h"
 #include "config.h"
+#include "data_processor_file.h"
 
 namespace savitar {
 namespace monitor {
@@ -31,7 +32,15 @@ int Agent::Init()
     do {
         hostname_=util::UtilNet::GetHostName();
         hostip_=Config::get_mutable_instance().LocalIp();
-        report_url_=Config::get_mutable_instance().ReportUrl();
+//        report_url_=Config::get_mutable_instance().ReportUrl();
+
+        rt=DataProcessorFile::get_mutable_instance().Init("../data/mon_data.json");
+        if(rt != 0)
+        {
+            break;
+        }
+        data_processor_list_.push_back(&(DataProcessorFile::get_mutable_instance()));
+
     } while (0);
     return rt;
 }
@@ -145,6 +154,11 @@ int Agent::Report(const std::string &data)
 {
     int rt=0;
     do{
+        for(auto & i:data_processor_list_)
+        {
+            i->Proc(data.c_str());
+        }
+
     }while(0);
     return rt;
 }
