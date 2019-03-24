@@ -11,9 +11,12 @@
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <netinet/in.h>
+#include <list>
 
 #include "api/layout_access.h"
 #include "boost/serialization/singleton.hpp"
+
+#include "data_processor_inf.h"
 
 namespace savitar {
 namespace monitor {
@@ -66,6 +69,7 @@ private:
     std::string hostname_;          ///<主机名
     std::string hostip_;            ///<主机IP
     std::string report_url_;        ///<API URL
+    std::list<DataProcessorInf *> data_processor_list_;   ///<监控数据处理器列表
 
 };//Agent
 
