@@ -6,8 +6,8 @@
 
 |功能|URL|方法|备注|
 |-----|:----|----|----|
-|属性上报|http://ip:port/reports|POST||
-|属性申请|http://ip:port/attrs|POST||
+|属性上报|http://ip:port/v1/attrrecords|POST||
+|属性申请|http://ip:port/v1/attrinfos|POST||
 
 ## 接口详解
 ### 属性上报
