@@ -75,7 +75,7 @@ example:
 ```
 
 #### Response
-http code: 200 成功
+http code: 201 成功
 
 http body:null
 
